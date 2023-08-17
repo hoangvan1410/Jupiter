@@ -1,4 +1,4 @@
-namespace FSH.WebApi.Application.Common.Mailing;
+namespace GAO.WebApi.Application.Common.Mailing;
 
 public class MailRequest
 {

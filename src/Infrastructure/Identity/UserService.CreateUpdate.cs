@@ -1,15 +1,15 @@
 ﻿using System.Security.Claims;
-using FSH.WebApi.Application.Common.Exceptions;
-using FSH.WebApi.Application.Common.Mailing;
-using FSH.WebApi.Application.Identity.Users;
-using FSH.WebApi.Domain.Common;
-using FSH.WebApi.Domain.Identity;
-using FSH.WebApi.Shared.Authorization;
+using GAO.WebApi.Application.Common.Exceptions;
+using GAO.WebApi.Application.Common.Mailing;
+using GAO.WebApi.Application.Identity.Users;
+using GAO.WebApi.Domain.Common;
+using GAO.WebApi.Domain.Identity;
+using GAO.WebApi.Shared.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Identity.Web;
 
-namespace FSH.WebApi.Infrastructure.Identity;
+namespace GAO.WebApi.Infrastructure.Identity;
 
 internal partial class UserService
 {
@@ -119,7 +119,7 @@ internal partial class UserService
             throw new InternalServerException(_t["Validation Errors Occurred."], result.GetErrors(_t));
         }
 
-        await _userManager.AddToRoleAsync(user, FSHRoles.Basic);
+        await _userManager.AddToRoleAsync(user, GAORoles.Basic);
 
         var messages = new List<string> { string.Format(_t["User {0} Registered."], user.UserName) };
 

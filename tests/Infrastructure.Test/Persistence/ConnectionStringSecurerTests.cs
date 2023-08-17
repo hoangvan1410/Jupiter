@@ -1,11 +1,11 @@
-﻿using FSH.WebApi.Application.Common.Persistence;
+﻿using GAO.WebApi.Application.Common.Persistence;
 using Xunit;
 
-namespace FSH.WebApi.Infrastructure.Persistence.Tests;
+namespace GAO.WebApi.Infrastructure.Persistence.Tests;
 
 public class ConnectionStringSecurerTests
 {
-    private const string Mssql = "Data Source=(localdb)\\mssqllocaldb;Initial Catalog=fullStackHeroDb;MultipleActiveResultSets=True;";
+    private const string Mssql = "Data Source=(localdb)\\mssqllocaldb;Initial Catalog=databaseName;MultipleActiveResultSets=True;";
     private const string Mysql = "server=127.0.0.1;database=test";
 
     private readonly IConnectionStringSecurer _connectionStringSecurer;

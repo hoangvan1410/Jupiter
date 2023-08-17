@@ -1,7 +1,7 @@
 ﻿using Finbuckle.MultiTenant;
-using FSH.WebApi.Application.Common.Caching;
+using GAO.WebApi.Application.Common.Caching;
 
-namespace FSH.WebApi.Infrastructure.Caching;
+namespace GAO.WebApi.Infrastructure.Caching;
 
 public class CacheKeyService : ICacheKeyService
 {

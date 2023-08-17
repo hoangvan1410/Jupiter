@@ -1,4 +1,4 @@
-namespace FSH.WebApi.Infrastructure.Auditing;
+namespace GAO.WebApi.Infrastructure.Auditing;
 
 public enum TrailType : byte
 {

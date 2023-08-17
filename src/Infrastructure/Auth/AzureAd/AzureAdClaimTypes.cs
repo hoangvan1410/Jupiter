@@ -1,4 +1,4 @@
-﻿namespace FSH.WebApi.Infrastructure.Auth.AzureAd;
+﻿namespace GAO.WebApi.Infrastructure.Auth.AzureAd;
 
 internal static class AzureADClaimTypes
 {

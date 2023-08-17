@@ -1,8 +1,8 @@
-using FSH.WebApi.Domain.Common.Events;
-using FSH.WebApi.Domain.Identity;
-using FSH.WebApi.Shared.Events;
+using GAO.WebApi.Domain.Common.Events;
+using GAO.WebApi.Domain.Identity;
+using GAO.WebApi.Shared.Events;
 
-namespace FSH.WebApi.Application.Dashboard;
+namespace GAO.WebApi.Application.Dashboard;
 
 public class SendStatsChangedNotificationHandler :
     IEventNotificationHandler<EntityCreatedEvent<Brand>>,

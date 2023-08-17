@@ -1,9 +1,9 @@
-﻿using FSH.WebApi.Application.Common.Exceptions;
-using FSH.WebApi.Application.Common.Mailing;
-using FSH.WebApi.Application.Identity.Users.Password;
+﻿using GAO.WebApi.Application.Common.Exceptions;
+using GAO.WebApi.Application.Common.Mailing;
+using GAO.WebApi.Application.Identity.Users.Password;
 using Microsoft.AspNetCore.WebUtilities;
 
-namespace FSH.WebApi.Infrastructure.Identity;
+namespace GAO.WebApi.Infrastructure.Identity;
 
 internal partial class UserService
 {

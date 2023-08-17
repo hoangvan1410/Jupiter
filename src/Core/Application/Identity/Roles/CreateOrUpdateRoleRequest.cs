@@ -1,4 +1,4 @@
-namespace FSH.WebApi.Application.Identity.Roles;
+namespace GAO.WebApi.Application.Identity.Roles;
 
 public class CreateOrUpdateRoleRequest
 {

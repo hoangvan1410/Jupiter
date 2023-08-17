@@ -1,11 +1,11 @@
-﻿using FSH.WebApi.Application.Common.Exceptions;
-using FSH.WebApi.Application.Identity.Users;
-using FSH.WebApi.Domain.Identity;
-using FSH.WebApi.Shared.Authorization;
-using FSH.WebApi.Shared.Multitenancy;
+﻿using GAO.WebApi.Application.Common.Exceptions;
+using GAO.WebApi.Application.Identity.Users;
+using GAO.WebApi.Domain.Identity;
+using GAO.WebApi.Shared.Authorization;
+using GAO.WebApi.Shared.Multitenancy;
 using Microsoft.EntityFrameworkCore;
 
-namespace FSH.WebApi.Infrastructure.Identity;
+namespace GAO.WebApi.Infrastructure.Identity;
 
 internal partial class UserService
 {
@@ -40,11 +40,11 @@ internal partial class UserService
         _ = user ?? throw new NotFoundException(_t["User Not Found."]);
 
         // Check if the user is an admin for which the admin role is getting disabled
-        if (await _userManager.IsInRoleAsync(user, FSHRoles.Admin)
-            && request.UserRoles.Any(a => !a.Enabled && a.RoleName == FSHRoles.Admin))
+        if (await _userManager.IsInRoleAsync(user, GAORoles.Admin)
+            && request.UserRoles.Any(a => !a.Enabled && a.RoleName == GAORoles.Admin))
         {
             // Get count of users in Admin Role
-            int adminCount = (await _userManager.GetUsersInRoleAsync(FSHRoles.Admin)).Count;
+            int adminCount = (await _userManager.GetUsersInRoleAsync(GAORoles.Admin)).Count;
 
             // Check if user is not Root Tenant Admin
             // Edge Case : there are chances for other tenants to have users with the same email as that of Root Tenant Admin. Probably can add a check while User Registration

@@ -1,4 +1,4 @@
-namespace FSH.WebApi.Application.Common.Interfaces;
+namespace GAO.WebApi.Application.Common.Interfaces;
 
 public interface ITransientService
 {

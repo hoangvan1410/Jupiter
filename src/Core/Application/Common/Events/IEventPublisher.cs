@@ -1,6 +1,6 @@
-using FSH.WebApi.Shared.Events;
+using GAO.WebApi.Shared.Events;
 
-namespace FSH.WebApi.Application.Common.Events;
+namespace GAO.WebApi.Application.Common.Events;
 
 public interface IEventPublisher : ITransientService
 {

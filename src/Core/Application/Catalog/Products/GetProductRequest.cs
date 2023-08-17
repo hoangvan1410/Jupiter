@@ -1,4 +1,4 @@
-﻿namespace FSH.WebApi.Application.Catalog.Products;
+﻿namespace GAO.WebApi.Application.Catalog.Products;
 
 public class GetProductRequest : IRequest<ProductDetailsDto>
 {

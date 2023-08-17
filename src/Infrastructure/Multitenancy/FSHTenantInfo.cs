@@ -1,15 +1,15 @@
 ﻿using Finbuckle.MultiTenant;
-using FSH.WebApi.Shared.Multitenancy;
+using GAO.WebApi.Shared.Multitenancy;
 
-namespace FSH.WebApi.Infrastructure.Multitenancy;
+namespace GAO.WebApi.Infrastructure.Multitenancy;
 
-public class FSHTenantInfo : ITenantInfo
+public class GAOTenantInfo : ITenantInfo
 {
-    public FSHTenantInfo()
+    public GAOTenantInfo()
     {
     }
 
-    public FSHTenantInfo(string id, string name, string? connectionString, string adminEmail, string? issuer = null)
+    public GAOTenantInfo(string id, string name, string? connectionString, string adminEmail, string? issuer = null)
     {
         Id = id;
         Identifier = id;

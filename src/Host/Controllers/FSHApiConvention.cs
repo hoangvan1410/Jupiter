@@ -1,12 +1,12 @@
-﻿using FSH.WebApi.Infrastructure.Middleware;
+﻿using GAO.WebApi.Infrastructure.Middleware;
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
 
-namespace FSH.WebApi.Host.Controllers;
+namespace GAO.WebApi.Host.Controllers;
 
 #nullable disable
 #pragma warning disable RCS1163, IDE0060
 
-public static class FSHApiConventions
+public static class GAOApiConventions
 {
     [ProducesResponseType(200)]
     [ProducesResponseType(400, Type = typeof(HttpValidationProblemDetails))]

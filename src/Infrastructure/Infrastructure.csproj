@@ -1,8 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <TargetFramework>net7.0</TargetFramework>
-        <RootNamespace>FSH.WebApi.Infrastructure</RootNamespace>
-        <AssemblyName>FSH.WebApi.Infrastructure</AssemblyName>
+        <RootNamespace>GAO.WebApi.Infrastructure</RootNamespace>
+        <AssemblyName>GAO.WebApi.Infrastructure</AssemblyName>
     </PropertyGroup>
     <ItemGroup>
         <FrameworkReference Include="Microsoft.AspNetCore.App" />
@@ -67,9 +67,6 @@
     <ItemGroup>
         <ProjectReference Include="..\Core\Application\Application.csproj" />
         <ProjectReference Include="..\Core\Domain\Domain.csproj" />
-    </ItemGroup>
-    <ItemGroup>
-        <None Update="Catalog\*.json" CopyToOutputDirectory="PreserveNewest" />
     </ItemGroup>
     <ItemGroup>
       <PackageReference Update="Roslynator.Analyzers" Version="4.2.0">

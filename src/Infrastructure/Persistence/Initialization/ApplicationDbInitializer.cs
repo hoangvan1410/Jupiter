@@ -1,9 +1,9 @@
 using Finbuckle.MultiTenant;
-using FSH.WebApi.Infrastructure.Persistence.Context;
+using GAO.WebApi.Infrastructure.Persistence.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 
-namespace FSH.WebApi.Infrastructure.Persistence.Initialization;
+namespace GAO.WebApi.Infrastructure.Persistence.Initialization;
 
 internal class ApplicationDbInitializer
 {

@@ -1,4 +1,4 @@
-namespace FSH.WebApi.Infrastructure.Middleware;
+namespace GAO.WebApi.Infrastructure.Middleware;
 
 public class MiddlewareSettings
 {

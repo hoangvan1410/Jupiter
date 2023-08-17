@@ -1,11 +1,11 @@
 ﻿using Finbuckle.MultiTenant;
-using FSH.WebApi.Infrastructure.Multitenancy;
-using FSH.WebApi.Shared.Multitenancy;
+using GAO.WebApi.Infrastructure.Multitenancy;
+using GAO.WebApi.Shared.Multitenancy;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
-namespace FSH.WebApi.Infrastructure.Persistence.Initialization;
+namespace GAO.WebApi.Infrastructure.Persistence.Initialization;
 
 internal class DatabaseInitializer : IDatabaseInitializer
 {
@@ -28,19 +28,16 @@ internal class DatabaseInitializer : IDatabaseInitializer
         {
             await InitializeApplicationDbForTenantAsync(tenant, cancellationToken);
         }
-
-        _logger.LogInformation("For documentations and guides, visit https://www.fullstackhero.net");
-        _logger.LogInformation("To Sponsor this project, visit https://opencollective.com/fullstackhero");
     }
 
-    public async Task InitializeApplicationDbForTenantAsync(FSHTenantInfo tenant, CancellationToken cancellationToken)
+    public async Task InitializeApplicationDbForTenantAsync(GAOTenantInfo tenant, CancellationToken cancellationToken)
     {
         // First create a new scope
         using var scope = _serviceProvider.CreateScope();
 
         // Then set current tenant so the right connectionstring is used
         _serviceProvider.GetRequiredService<IMultiTenantContextAccessor>()
-            .MultiTenantContext = new MultiTenantContext<FSHTenantInfo>()
+            .MultiTenantContext = new MultiTenantContext<GAOTenantInfo>()
             {
                 TenantInfo = tenant
             };
@@ -65,7 +62,7 @@ internal class DatabaseInitializer : IDatabaseInitializer
     {
         if (await _tenantDbContext.TenantInfo.FindAsync(new object?[] { MultitenancyConstants.Root.Id }, cancellationToken: cancellationToken) is null)
         {
-            var rootTenant = new FSHTenantInfo(
+            var rootTenant = new GAOTenantInfo(
                 MultitenancyConstants.Root.Id,
                 MultitenancyConstants.Root.Name,
                 string.Empty,

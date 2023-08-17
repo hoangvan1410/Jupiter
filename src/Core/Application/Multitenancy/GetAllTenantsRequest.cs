@@ -1,4 +1,4 @@
-﻿namespace FSH.WebApi.Application.Multitenancy;
+﻿namespace GAO.WebApi.Application.Multitenancy;
 
 public class GetAllTenantsRequest : IRequest<List<TenantDto>>
 {

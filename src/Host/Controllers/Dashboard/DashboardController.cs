@@ -1,11 +1,11 @@
-using FSH.WebApi.Application.Dashboard;
+using GAO.WebApi.Application.Dashboard;
 
-namespace FSH.WebApi.Host.Controllers.Dashboard;
+namespace GAO.WebApi.Host.Controllers.Dashboard;
 
 public class DashboardController : VersionedApiController
 {
     [HttpGet]
-    [MustHavePermission(FSHAction.View, FSHResource.Dashboard)]
+    [MustHavePermission(GAOAction.View, GAOResource.Dashboard)]
     [OpenApiOperation("Get statistics for the dashboard.", "")]
     public Task<StatsDto> GetAsync()
     {

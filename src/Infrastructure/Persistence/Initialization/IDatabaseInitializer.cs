@@ -1,9 +1,9 @@
-﻿using FSH.WebApi.Infrastructure.Multitenancy;
+﻿using GAO.WebApi.Infrastructure.Multitenancy;
 
-namespace FSH.WebApi.Infrastructure.Persistence.Initialization;
+namespace GAO.WebApi.Infrastructure.Persistence.Initialization;
 
 internal interface IDatabaseInitializer
 {
     Task InitializeDatabasesAsync(CancellationToken cancellationToken);
-    Task InitializeApplicationDbForTenantAsync(FSHTenantInfo tenant, CancellationToken cancellationToken);
+    Task InitializeApplicationDbForTenantAsync(GAOTenantInfo tenant, CancellationToken cancellationToken);
 }

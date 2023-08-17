@@ -1,12 +1,12 @@
 using Finbuckle.MultiTenant;
-using FSH.WebApi.Application.Common.Events;
-using FSH.WebApi.Application.Common.Interfaces;
-using FSH.WebApi.Domain.Catalog;
-using FSH.WebApi.Infrastructure.Persistence.Configuration;
+using GAO.WebApi.Application.Common.Events;
+using GAO.WebApi.Application.Common.Interfaces;
+using GAO.WebApi.Domain.Catalog;
+using GAO.WebApi.Infrastructure.Persistence.Configuration;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 
-namespace FSH.WebApi.Infrastructure.Persistence.Context;
+namespace GAO.WebApi.Infrastructure.Persistence.Context;
 
 public class ApplicationDbContext : BaseDbContext
 {

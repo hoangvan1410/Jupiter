@@ -1,4 +1,4 @@
-﻿namespace FSH.WebApi.Application.Common.Caching;
+﻿namespace GAO.WebApi.Application.Common.Caching;
 
 public static class CacheKeyServiceExtensions
 {

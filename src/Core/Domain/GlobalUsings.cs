@@ -1,1 +1,1 @@
-﻿global using FSH.WebApi.Domain.Common.Contracts;
+﻿global using GAO.WebApi.Domain.Common.Contracts;

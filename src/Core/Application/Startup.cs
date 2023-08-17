@@ -1,7 +1,7 @@
 using System.Reflection;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace FSH.WebApi.Application;
+namespace GAO.WebApi.Application;
 
 public static class Startup
 {

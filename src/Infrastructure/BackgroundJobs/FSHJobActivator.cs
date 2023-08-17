@@ -1,19 +1,19 @@
 ﻿using Finbuckle.MultiTenant;
-using FSH.WebApi.Infrastructure.Auth;
-using FSH.WebApi.Infrastructure.Common;
-using FSH.WebApi.Infrastructure.Multitenancy;
-using FSH.WebApi.Shared.Multitenancy;
+using GAO.WebApi.Infrastructure.Auth;
+using GAO.WebApi.Infrastructure.Common;
+using GAO.WebApi.Infrastructure.Multitenancy;
+using GAO.WebApi.Shared.Multitenancy;
 using Hangfire;
 using Hangfire.Server;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace FSH.WebApi.Infrastructure.BackgroundJobs;
+namespace GAO.WebApi.Infrastructure.BackgroundJobs;
 
-public class FSHJobActivator : JobActivator
+public class GAOJobActivator : JobActivator
 {
     private readonly IServiceScopeFactory _scopeFactory;
 
-    public FSHJobActivator(IServiceScopeFactory scopeFactory) =>
+    public GAOJobActivator(IServiceScopeFactory scopeFactory) =>
         _scopeFactory = scopeFactory ?? throw new ArgumentNullException(nameof(scopeFactory));
 
     public override JobActivatorScope BeginScope(PerformContext context) =>
@@ -34,11 +34,11 @@ public class FSHJobActivator : JobActivator
 
         private void ReceiveParameters()
         {
-            var tenantInfo = _context.GetJobParameter<FSHTenantInfo>(MultitenancyConstants.TenantIdName);
+            var tenantInfo = _context.GetJobParameter<GAOTenantInfo>(MultitenancyConstants.TenantIdName);
             if (tenantInfo is not null)
             {
                 _scope.ServiceProvider.GetRequiredService<IMultiTenantContextAccessor>()
-                    .MultiTenantContext = new MultiTenantContext<FSHTenantInfo>
+                    .MultiTenantContext = new MultiTenantContext<GAOTenantInfo>
                     {
                         TenantInfo = tenantInfo
                     };

@@ -1,4 +1,4 @@
-namespace FSH.WebApi.Application.Common.FileStorage;
+namespace GAO.WebApi.Application.Common.FileStorage;
 
 public class FileUploadRequest
 {

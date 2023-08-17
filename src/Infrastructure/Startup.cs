@@ -1,22 +1,22 @@
 using System.Reflection;
 using System.Runtime.CompilerServices;
-using FSH.WebApi.Infrastructure.Auth;
-using FSH.WebApi.Infrastructure.BackgroundJobs;
-using FSH.WebApi.Infrastructure.Caching;
-using FSH.WebApi.Infrastructure.Common;
-using FSH.WebApi.Infrastructure.Cors;
-using FSH.WebApi.Infrastructure.FileStorage;
-using FSH.WebApi.Infrastructure.Localization;
-using FSH.WebApi.Infrastructure.Mailing;
-using FSH.WebApi.Infrastructure.Mapping;
-using FSH.WebApi.Infrastructure.Middleware;
-using FSH.WebApi.Infrastructure.Multitenancy;
-using FSH.WebApi.Infrastructure.Notifications;
-using FSH.WebApi.Infrastructure.OpenApi;
-using FSH.WebApi.Infrastructure.Persistence;
-using FSH.WebApi.Infrastructure.Persistence.Initialization;
-using FSH.WebApi.Infrastructure.SecurityHeaders;
-using FSH.WebApi.Infrastructure.Validations;
+using GAO.WebApi.Infrastructure.Auth;
+using GAO.WebApi.Infrastructure.BackgroundJobs;
+using GAO.WebApi.Infrastructure.Caching;
+using GAO.WebApi.Infrastructure.Common;
+using GAO.WebApi.Infrastructure.Cors;
+using GAO.WebApi.Infrastructure.FileStorage;
+using GAO.WebApi.Infrastructure.Localization;
+using GAO.WebApi.Infrastructure.Mailing;
+using GAO.WebApi.Infrastructure.Mapping;
+using GAO.WebApi.Infrastructure.Middleware;
+using GAO.WebApi.Infrastructure.Multitenancy;
+using GAO.WebApi.Infrastructure.Notifications;
+using GAO.WebApi.Infrastructure.OpenApi;
+using GAO.WebApi.Infrastructure.Persistence;
+using GAO.WebApi.Infrastructure.Persistence.Initialization;
+using GAO.WebApi.Infrastructure.SecurityHeaders;
+using GAO.WebApi.Infrastructure.Validations;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Mvc;
@@ -26,13 +26,13 @@ using Microsoft.Extensions.DependencyInjection;
 
 [assembly: InternalsVisibleTo("Infrastructure.Test")]
 
-namespace FSH.WebApi.Infrastructure;
+namespace GAO.WebApi.Infrastructure;
 
 public static class Startup
 {
     public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration config)
     {
-        var applicationAssembly = typeof(FSH.WebApi.Application.Startup).GetTypeInfo().Assembly;
+        var applicationAssembly = typeof(GAO.WebApi.Application.Startup).GetTypeInfo().Assembly;
         MapsterSettings.Configure();
         return services
             .AddApiVersioning()

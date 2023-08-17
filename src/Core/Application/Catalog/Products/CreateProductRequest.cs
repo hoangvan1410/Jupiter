@@ -1,6 +1,6 @@
-using FSH.WebApi.Domain.Common.Events;
+using GAO.WebApi.Domain.Common.Events;
 
-namespace FSH.WebApi.Application.Catalog.Products;
+namespace GAO.WebApi.Application.Catalog.Products;
 
 public class CreateProductRequest : IRequest<Guid>
 {

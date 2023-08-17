@@ -1,26 +1,26 @@
 using Ardalis.Specification;
 using Ardalis.Specification.EntityFrameworkCore;
 using Finbuckle.MultiTenant;
-using FSH.WebApi.Application.Common.Caching;
-using FSH.WebApi.Application.Common.Events;
-using FSH.WebApi.Application.Common.Exceptions;
-using FSH.WebApi.Application.Common.FileStorage;
-using FSH.WebApi.Application.Common.Interfaces;
-using FSH.WebApi.Application.Common.Mailing;
-using FSH.WebApi.Application.Common.Models;
-using FSH.WebApi.Application.Common.Specification;
-using FSH.WebApi.Application.Identity.Users;
-using FSH.WebApi.Domain.Identity;
-using FSH.WebApi.Infrastructure.Auth;
-using FSH.WebApi.Infrastructure.Persistence.Context;
-using FSH.WebApi.Shared.Authorization;
+using GAO.WebApi.Application.Common.Caching;
+using GAO.WebApi.Application.Common.Events;
+using GAO.WebApi.Application.Common.Exceptions;
+using GAO.WebApi.Application.Common.FileStorage;
+using GAO.WebApi.Application.Common.Interfaces;
+using GAO.WebApi.Application.Common.Mailing;
+using GAO.WebApi.Application.Common.Models;
+using GAO.WebApi.Application.Common.Specification;
+using GAO.WebApi.Application.Identity.Users;
+using GAO.WebApi.Domain.Identity;
+using GAO.WebApi.Infrastructure.Auth;
+using GAO.WebApi.Infrastructure.Persistence.Context;
+using GAO.WebApi.Shared.Authorization;
 using Mapster;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Localization;
 using Microsoft.Extensions.Options;
 
-namespace FSH.WebApi.Infrastructure.Identity;
+namespace GAO.WebApi.Infrastructure.Identity;
 
 internal partial class UserService : IUserService
 {
@@ -138,7 +138,7 @@ internal partial class UserService : IUserService
 
         _ = user ?? throw new NotFoundException(_t["User Not Found."]);
 
-        bool isAdmin = await _userManager.IsInRoleAsync(user, FSHRoles.Admin);
+        bool isAdmin = await _userManager.IsInRoleAsync(user, GAORoles.Admin);
         if (isAdmin)
         {
             throw new ConflictException(_t["Administrators Profile's Status cannot be toggled"]);

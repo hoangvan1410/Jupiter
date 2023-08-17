@@ -1,4 +1,4 @@
-namespace FSH.WebApi.Application.Catalog.Brands;
+namespace GAO.WebApi.Application.Catalog.Brands;
 
 public class BrandDto : IDto
 {

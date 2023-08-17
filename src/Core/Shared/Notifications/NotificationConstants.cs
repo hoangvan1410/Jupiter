@@ -1,4 +1,4 @@
-﻿namespace FSH.WebApi.Shared.Notifications;
+﻿namespace GAO.WebApi.Shared.Notifications;
 
 public static class NotificationConstants
 {

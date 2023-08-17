@@ -1,9 +1,9 @@
-﻿using FSH.WebApi.Application.Common.Events;
-using FSH.WebApi.Application.Identity.Users;
-using FSH.WebApi.Domain.Identity;
+﻿using GAO.WebApi.Application.Common.Events;
+using GAO.WebApi.Application.Identity.Users;
+using GAO.WebApi.Domain.Identity;
 using Microsoft.AspNetCore.Identity;
 
-namespace FSH.WebApi.Infrastructure.Identity;
+namespace GAO.WebApi.Infrastructure.Identity;
 
 internal class InvalidateUserPermissionCacheHandler :
     IEventNotificationHandler<ApplicationUserUpdatedEvent>,

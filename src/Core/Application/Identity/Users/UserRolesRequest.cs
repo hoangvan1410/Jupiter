@@ -1,4 +1,4 @@
-namespace FSH.WebApi.Application.Identity.Users;
+namespace GAO.WebApi.Application.Identity.Users;
 
 public class UserRolesRequest
 {

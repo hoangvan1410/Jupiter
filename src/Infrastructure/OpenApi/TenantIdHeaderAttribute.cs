@@ -1,6 +1,6 @@
-﻿using FSH.WebApi.Shared.Multitenancy;
+﻿using GAO.WebApi.Shared.Multitenancy;
 
-namespace FSH.WebApi.Infrastructure.OpenApi;
+namespace GAO.WebApi.Infrastructure.OpenApi;
 
 public class TenantIdHeaderAttribute : SwaggerHeaderAttribute
 {

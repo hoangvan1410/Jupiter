@@ -1,4 +1,4 @@
-namespace FSH.WebApi.Application.Identity.Users.Password;
+namespace GAO.WebApi.Application.Identity.Users.Password;
 
 public class ChangePasswordRequest
 {

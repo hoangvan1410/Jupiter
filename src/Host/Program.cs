@@ -1,13 +1,13 @@
-using FSH.WebApi.Application;
-using FSH.WebApi.Host.Configurations;
-using FSH.WebApi.Host.Controllers;
-using FSH.WebApi.Infrastructure;
-using FSH.WebApi.Infrastructure.Common;
-using FSH.WebApi.Infrastructure.Logging.Serilog;
+using GAO.WebApi.Application;
+using GAO.WebApi.Host.Configurations;
+using GAO.WebApi.Host.Controllers;
+using GAO.WebApi.Infrastructure;
+using GAO.WebApi.Infrastructure.Common;
+using GAO.WebApi.Infrastructure.Logging.Serilog;
 using Serilog;
 using Serilog.Formatting.Compact;
 
-[assembly: ApiConventionType(typeof(FSHApiConventions))]
+[assembly: ApiConventionType(typeof(GAOApiConventions))]
 
 StaticLogger.EnsureInitialized();
 Log.Information("Server Booting Up...");

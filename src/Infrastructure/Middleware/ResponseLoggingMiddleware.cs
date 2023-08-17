@@ -1,9 +1,9 @@
-using FSH.WebApi.Application.Common.Interfaces;
+using GAO.WebApi.Application.Common.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Serilog;
 using Serilog.Context;
 
-namespace FSH.WebApi.Infrastructure.Middleware;
+namespace GAO.WebApi.Infrastructure.Middleware;
 
 public class ResponseLoggingMiddleware : IMiddleware
 {

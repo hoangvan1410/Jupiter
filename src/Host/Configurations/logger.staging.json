@@ -1,6 +1,6 @@
 {
   "LoggerSettings": {
-    "AppName": "FSH.WebApi",
+    "AppName": "GAO.WebApi",
     "WriteToFile": false,
     "StructuredConsoleLogging": true
   }
